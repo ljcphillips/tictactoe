@@ -51,5 +51,17 @@ describe ("TicTacToe", function(){
     expect(tictactoe.isWonDiagonal()).to.be.true
   });
 
+  it ("should check if there is a winner",function (){
+    tictactoe.play(0,0)
+    tictactoe.changePlayer()
+    tictactoe.play(1,2)
+    tictactoe.changePlayer()
+    tictactoe.play(1,1)
+    tictactoe.changePlayer()
+    tictactoe.play(1,0)
+    tictactoe.changePlayer()
+    tictactoe.play(2,2)
+    expect(tictactoe.isWon()).to.be.true
+  });
 
 });

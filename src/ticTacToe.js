@@ -46,6 +46,12 @@ TicTacToe.prototype.isWonDiagonal = function () {
    }
 };
 
+TicTacToe.prototype.isWon = function () {
+   if ( this.isWonVertical() === true || this.isWonHorizontal() === true || this.isWonDiagonal() === true){
+   return true;
+   }
+};
+
 
 
 module.exports = TicTacToe;
