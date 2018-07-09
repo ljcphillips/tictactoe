@@ -13,4 +13,12 @@ describe ("TicTacToe", function(){
     expect(tictactoe.grid[0][0]).to.eql("X")
   });
 
+  it ("should check if there is a winner on the rows",function (){
+    tictactoe.play(2,0,"O")
+    tictactoe.play(2,1,"O")
+    tictactoe.play(2,2,"O")
+    expect(tictactoe.isWonHorizontal()).to.be.true
+  });
+
+
 });
