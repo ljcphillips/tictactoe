@@ -2,9 +2,45 @@
 <html>
 <head>
 <title> my local server </title>
+<style media="screen">
+  h1 {
+  text-align: center;
+  }
+  td {
+  width: 100px;
+  height: 100px;
+  }
+  table {
+  margin: 5px auto;
+  }
+  .vert {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  }
+  .hori {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  }
+</style>
 </head>
 <body>
-<h1> server working </h1>
-<p> just put your html,css, js files here and it work on your own local nodejs server </p>
+  <h1>Tic Tac Toe</h1>
+  <table>
+    <tr>
+      <td></td>
+      <td class="vert"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hori"></td>
+      <td class="vert hori"></td>
+      <td class="hori"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="vert"></td>
+      <td></td>
+    </tr>
+  </table>
 </body>
 </html>
