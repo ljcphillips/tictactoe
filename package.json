@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ljcphillips/tictactoe#readme",
   "dependencies": {
     "chai": "^4.1.2",
+    "cucumber": "^4.2.1",
     "express": "^4.16.3",
     "mocha": "^5.2.0"
   }

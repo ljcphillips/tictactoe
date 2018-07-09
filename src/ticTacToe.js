@@ -1,3 +1,5 @@
+(function(exports) {
+
 function TicTacToe(){
   this.grid = [["","",""],["","",""],["","",""]]
   this.currentPlayer = 'X'
@@ -52,6 +54,7 @@ TicTacToe.prototype.isWon = function () {
    }
 };
 
+// module.exports = TicTacToe;
 
-
-module.exports = TicTacToe;
+exports.TicTacToe = TicTacToe;
+})(this);
