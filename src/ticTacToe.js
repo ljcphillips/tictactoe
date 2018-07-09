@@ -1,30 +1,49 @@
 function TicTacToe(){
   this.grid = [["","",""],["","",""],["","",""]]
+  this.currentPlayer = 'X'
 };
 
 TicTacToe.prototype.showGrid = function () {
   return this.grid;
 };
 
-TicTacToe.prototype.play = function (orisontal, vertical, player) {
-   this.grid[orisontal][vertical] = player
+TicTacToe.prototype.changePlayer = function(){
+  if (this.currentPlayer === 'X'){
+    this.currentPlayer = 'O'
+  }else{
+    this.currentPlayer = 'X'
+  }
+}
+
+
+TicTacToe.prototype.play = function (orisontal, vertical) {
+  this.grid[orisontal][vertical] = this.currentPlayer
 };
 
 TicTacToe.prototype.isWonHorizontal = function () {
-   if (this.grid[0][0] === "X" && this.grid[0][1] === "X" && this.grid[0][2] === "X" ||
-       this.grid[1][0] === "X" && this.grid[1][1] === "X" && this.grid[1][2] === "X" ||
-       this.grid[2][0] === "X" && this.grid[2][1] === "X" && this.grid[2][2] === "X"){
+   if (this.grid[0][0] === this.currentPlayer && this.grid[0][1] === this.currentPlayer && this.grid[0][2] === this.currentPlayer ||
+       this.grid[1][0] === this.currentPlayer && this.grid[1][1] === this.currentPlayer && this.grid[1][2] === this.currentPlayer ||
+       this.grid[2][0] === this.currentPlayer && this.grid[2][1] === this.currentPlayer && this.grid[2][2] === this.currentPlayer){
 
    return true;
    }
-   if (this.grid[0][0] === "O" && this.grid[0][1] === "O" && this.grid[0][2] === "O" ||
-       this.grid[1][0] === "O" && this.grid[1][1] === "O" && this.grid[1][2] === "O" ||
-       this.grid[2][0] === "O" && this.grid[2][1] === "O" && this.grid[2][2] === "O"){
+};
+
+TicTacToe.prototype.isWonVertical = function () {
+   if (this.grid[0][0] === this.currentPlayer && this.grid[1][0] === this.currentPlayer && this.grid[2][0] === this.currentPlayer ||
+       this.grid[0][1] === this.currentPlayer && this.grid[1][1] === this.currentPlayer && this.grid[2][1] === this.currentPlayer ||
+       this.grid[0][2] === this.currentPlayer && this.grid[1][2] === this.currentPlayer && this.grid[2][2] === this.currentPlayer){
 
    return true;
-    }
+   }
+};
 
+TicTacToe.prototype.isWonDiagonal = function () {
+   if (this.grid[0][0] === this.currentPlayer && this.grid[1][1] === this.currentPlayer && this.grid[2][2] === this.currentPlayer ||
+       this.grid[0][2] === this.currentPlayer && this.grid[1][1] === this.currentPlayer && this.grid[2][0] === this.currentPlayer){
 
+   return true;
+   }
 };
 
 
