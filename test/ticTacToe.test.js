@@ -10,7 +10,7 @@ describe ("TicTacToe", function(){
 
   it ("should change the grid according to players choice",function (){
     tictactoe.play(0,0,"X")
-    expect(this.grid[0][0]).to.eql("X")
+    expect(tictactoe.grid[0][0]).to.eql("X")
   });
 
 });
