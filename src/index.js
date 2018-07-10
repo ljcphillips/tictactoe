@@ -2,6 +2,9 @@ let tictactoe = new TicTacToe();
 
 
 $( "td" ).click(function() {
-  $( this ).text(tictactoe.currentPlayer);
-  tictactoe.changePlayer();
+  if(!$( this ).text()){
+    $( this ).text(tictactoe.currentPlayer)
+    tictactoe.play()
+    tictactoe.changePlayer();
+  }
 });
