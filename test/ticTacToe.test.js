@@ -67,4 +67,26 @@ describe ("TicTacToe", function(){
     expect(tictactoe.isWon()).to.be.true
   });
 
+  it ("should check if there is a draw",function (){
+    // tictactoe.play(0)
+    // tictactoe.changePlayer()
+    // tictactoe.play(1)
+    // tictactoe.changePlayer()
+    // tictactoe.play(2)
+    // tictactoe.changePlayer()
+    // tictactoe.play(4)
+    // tictactoe.changePlayer()
+    // tictactoe.play(3)
+    // tictactoe.changePlayer()
+    // tictactoe.play(6)
+    // tictactoe.changePlayer()
+    // tictactoe.play(5)
+    // tictactoe.changePlayer()
+    // tictactoe.play(8)
+    // tictactoe.changePlayer()
+    // tictactoe.play(7)
+    tictactoe.count = 9 
+    expect(tictactoe.isDraw()).to.be.true
+  });
+
 });

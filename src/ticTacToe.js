@@ -3,6 +3,7 @@
 function TicTacToe(){
   this.grid = ["","","","","","","","",""]
   this.currentPlayer = 'X'
+  this.count = 1
 };
 
 TicTacToe.prototype.showGrid = function () {
@@ -15,6 +16,7 @@ TicTacToe.prototype.changePlayer = function(){
   }else{
     this.currentPlayer = 'X'
   }
+  this.count ++
 }
 
 
@@ -51,6 +53,12 @@ TicTacToe.prototype.isWonDiagonal = function () {
 TicTacToe.prototype.isWon = function () {
    if ( this.isWonVertical() === true || this.isWonHorizontal() === true || this.isWonDiagonal() === true){
    return true;
+   }
+};
+
+TicTacToe.prototype.isDraw = function () {
+   if ( !this.isWon() && this.count === 9){
+     return true;
    }
 };
 
