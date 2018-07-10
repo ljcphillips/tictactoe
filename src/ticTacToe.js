@@ -54,7 +54,10 @@ TicTacToe.prototype.isWon = function () {
    }
 };
 
-// module.exports = TicTacToe;
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
+    module.exports = TicTacToe;
+  else {
+    exports.TicTacToe = TicTacToe;
+  }
 
-exports.TicTacToe = TicTacToe;
 })(this);
