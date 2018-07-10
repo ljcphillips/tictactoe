@@ -19,7 +19,7 @@ TicTacToe.prototype.changePlayer = function(){
 
 
 TicTacToe.prototype.play = function (gridIndex) {
-  this.grid[gridIndex] = this.currentPlayer
+  this.grid[parseInt(gridIndex)] = this.currentPlayer
 };
 
 TicTacToe.prototype.isWonHorizontal = function () {
@@ -54,7 +54,7 @@ TicTacToe.prototype.isWon = function () {
    }
 };
 
-module.exports = TicTacToe;
+// module.exports = TicTacToe;
 
 exports.TicTacToe = TicTacToe;
 })(this);
